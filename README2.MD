@@ -117,7 +117,7 @@ The SQL will be something like this:
 ~~~
 CREATE TABLE inte2043.environment (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  record_timedate TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   temperature FLOAT NOT NULL,
   humidity FLOAT NULL,
   PRIMARY KEY (id));
