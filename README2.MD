@@ -143,5 +143,40 @@ I'll leave it to you to work out how to run Python programs.  Dr Google may able
 The program is set up to read the humidity and temperature every 10 minutes.
 
 Once the program has been running for a minute or two, you should be able run an SQL SELECT statement to see that some data has been stored in the database.
+## Runing the software on a "headless" Pi
+If you want to run the software on a Pi without a screen and keyboard and have the Python program run automatically when the Pi boots, there is a trtick that allows you to do that.
+
+The trick involves putting the rogram run instruction into a file **/etc/rc.local**.  This file runs as the last action when a Linux computer boots.  Here is an example **/etc/rc.local** which should od the trick.
+
+~~~
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# Run Python temperature program
+sleep 3;/usr/bin/python3 /home/pi/projects/home-weather-station/Home_Weather_Display_mysql.py &
+
+
+# Print the IP address
+_IP=$(hostname -I) || true
+if [ "$_IP" ]; then
+  printf "My IP address is %s\n" "$_IP"
+fi
+
+exit 0
+~~~
+The line that does the work is:<br />
+sleep 3;/usr/bin/python3 /home/pi/projects/home-weather-station/Home_Weather_Display_mysql.py &
+
+The ";" (as in sleep3;/usr ...) joins two bash commands into the same line,
 # Next #
 When you have all this working. you should move on to READM3.MD
