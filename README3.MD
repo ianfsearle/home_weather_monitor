@@ -12,6 +12,8 @@ You can run the blink test program if you like.  The LED module will be in the k
 ## The display program
 The Python program that will read the database and control the LCD display will have been downloaded when you cloned the Gitlab repository.  The Python file you want is: **Home_Weather_Grove_Display.py**.
 
-Before you run this program, read through the code because you need to make a change a line of code.  There is a comment in the code to tell you waht to change.
+Before you run this program, read through the code because you need to make a change a line of code.  There is a comment in the code to tell you what to change.
+# Evidence
+Show the operating dispaly to your tutor.
 
 
