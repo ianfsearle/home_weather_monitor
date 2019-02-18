@@ -14,6 +14,6 @@ The Python program that will read the database and control the LCD display will 
 
 Before you run this program, read through the code because you need to make a change a line of code.  There is a comment in the code to tell you what to change.
 # Evidence
-Show the operating dispaly to your tutor.
+Show the operating display to your tutor.
 
 
