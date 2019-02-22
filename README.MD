@@ -64,18 +64,18 @@ When this is complete, power the Raspberry Pi down.
 
 The DHT22 sensor has three wires attached to it:
 
- * Red: 3.5 volt power
- * Black: 0 volts or earth
- * Blue: Data
+ * VCC: 3.5 volt power
+ * GND: 0 volts or earth
+ * DAT: Data
 
 You should attach these wires to the General Purpose Input Output (GPIO) pins of the Raspberry Pi.  Take care to connect the wires correctly.  Equipment can be damaged by incorrect connections.  To help you, here is a diagram showing the Pi's GPIO pin layout.
 ![GPOI pin layout](images/Raspberry-Pi-GPIO-Layout-Model-B-Plus-rotated-2700x900.png)
 
 Attach the wires in this way:
 
- * Red to Pin 1 - 3v3
- * Black to Pin 9 - Ground
- * Blue to Pin 7 GPIO4
+ * VCC to Pin 1 - 3v3
+ * GND to Pin 9 - Ground
+ * DAT to Pin 7 GPIO4
 
 ![DHT22 connections](images/IMGP0713.JPG)
 
